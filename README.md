@@ -1,16 +1,18 @@
-## CURL Examples
+# CURL Examples
 
-# Get models
+Put your API key after "Basic" instead of mRFJ...
 
-    curl -H "Authorization: Basic JDJhJDEwJGdsYjBGZzhNMDIvd0JESzhsd090WHVOMjVkeXB2RllaT3JXVk5OcnYvR0lmOEFxYTlYWlNH" http://api.teradeep.com:8088/getmodels
+## Get models
+
+    curl -H "Authorization: Basic mRFJHFaMlUG40wS1BTdEVwL0tmLDbnlmVd3T09ZlYvLUzZ08VXUFJyZGNnPk1ZSHZhQXdiRDJDJhJDEw" http://api.teradeep.com:8088/getmodels
 
 Output:
 
     [{"name":"food","description":"E. Culurciello\nJanuary 2015\n\nNeural network:\nhttps://github.com/teradeep/train-net-master/blob/master/models/td-net-large.lua\n\nTrained on:\nhttps://www.vision.ee.ethz.ch/datasets_extra/food-101/\n“a challenging data set of 101 food categories, with 101'000 images. For each class, 250 manually reviewed test images are provided as well as 750 training images.”"},{"name":"generic","description":"A. Canziani May 2015 Large 1-weird trick neural net trained on camFind \ndataset 1000 categories of most typical objects (top 1000 words in \ncamFind captions) 10,000 images per category\n"},{"name":"home-basic","description":""}]
 
-# Get targets
+## Get targets
 
-    curl -H "Authorization: Basic JDJhJDEwJGdsYjBGZzhNMDIvd0JESzhsd090WHVOMjVkeXB2RllaT3JXVk5OcnYvR0lmOEFxYTlYWlNH" http://api.teradeep.com:8088/gettargets -F network=home-basic
+    curl -H "Authorization: Basic mRFJHFaMlUG40wS1BTdEVwL0tmLDbnlmVd3T09ZlYvLUzZ08VXUFJyZGNnPk1ZSHZhQXdiRDJDJhJDEw" http://api.teradeep.com:8088/gettargets -F network=home-basic
 	
 Output:
 
@@ -25,9 +27,9 @@ Output:
 }
 ```
 
-# Process image
+## Process image
 
-    curl -H "Authorization: Basic JDJhJDEwJGdsYjBGZzhNMDIvd0JESzhsd090WHVOMjVkeXB2RllaT3JXVk5OcnYvR0lmOEFxYTlYWlNH" http://api.teradeep.com:8088/image/process -F inputnetwork=home-basic -F inputimagefile=@image.jpg 
+    curl -H "Authorization: Basic mRFJHFaMlUG40wS1BTdEVwL0tmLDbnlmVd3T09ZlYvLUzZ08VXUFJyZGNnPk1ZSHZhQXdiRDJDJhJDEw" http://api.teradeep.com:8088/image/process -F inputnetwork=home-basic -F inputimagefile=@image.jpg 
 	
 Output:
 
@@ -59,7 +61,7 @@ Output:
   "processid": "55fc6c9592bfa83907818e21"
 }
 ```
-    curl -H "Authorization: Basic JDJhJDEwJGdsYjBGZzhNMDIvd0JESzhsd090WHVOMjVkeXB2RllaT3JXVk5OcnYvR0lmOEFxYTlYWlNH" http://api.teradeep.com:8088/image/process -F inputnetwork=home-basic -F inputimagefile=@image.jpg -F targets=person,dog
+    curl -H "Authorization: Basic mRFJHFaMlUG40wS1BTdEVwL0tmLDbnlmVd3T09ZlYvLUzZ08VXUFJyZGNnPk1ZSHZhQXdiRDJDJhJDEw" http://api.teradeep.com:8088/image/process -F inputnetwork=home-basic -F inputimagefile=@image.jpg -F targets=person,dog
 
 Output:
 
@@ -80,9 +82,9 @@ Output:
 }
 ```
 
-# Process video
+## Process video
 
-    curl -H "Authorization: Basic JDJhJDEwJGdsYjBGZzhNMDIvd0JESzhsd090WHVOMjVkeXB2RllaT3JXVk5OcnYvR0lmOEFxYTlYWlNH" http://api.teradeep.com:8088/video/submit -F inputnetwork=home-basic -F inputvideofile=@video.mp4 -F targets=person
+    curl -H "Authorization: Basic mRFJHFaMlUG40wS1BTdEVwL0tmLDbnlmVd3T09ZlYvLUzZ08VXUFJyZGNnPk1ZSHZhQXdiRDJDJhJDEw" http://api.teradeep.com:8088/video/submit -F inputnetwork=home-basic -F inputvideofile=@video.mp4 -F targets=person
 
 Output:
 
@@ -95,16 +97,16 @@ Output:
 }
 ```
 
-    curl -H "Authorization: Basic JDJhJDEwJGdsYjBGZzhNMDIvd0JESzhsd090WHVOMjVkeXB2RllaT3JXVk5OcnYvR0lmOEFxYTlYWlNH" http://api.teradeep.com:8088/video/submit -F inputnetwork=home-basic -F inputvideofile=@video.mp4 -F targets=person -F outputtype=srt
+    curl -H "Authorization: Basic mRFJHFaMlUG40wS1BTdEVwL0tmLDbnlmVd3T09ZlYvLUzZ08VXUFJyZGNnPk1ZSHZhQXdiRDJDJhJDEw" http://api.teradeep.com:8088/video/submit -F inputnetwork=home-basic -F inputvideofile=@video.mp4 -F targets=person -F outputtype=srt
 
 Output:
 
 ```
 ```
 	
-# Video status
+## Video status
 
-    curl -H "Authorization: Basic JDJhJDEwJGdsYjBGZzhNMDIvd0JESzhsd090WHVOMjVkeXB2RllaT3JXVk5OcnYvR0lmOEFxYTlYWlNH" http://api.teradeep.com:8088/video/status -F processid=55fc6ab592bfa83907818e1f
+    curl -H "Authorization: Basic mRFJHFaMlUG40wS1BTdEVwL0tmLDbnlmVd3T09ZlYvLUzZ08VXUFJyZGNnPk1ZSHZhQXdiRDJDJhJDEw" http://api.teradeep.com:8088/video/status -F processid=55fc6ab592bfa83907818e1f
 
 Output:
 
@@ -117,9 +119,9 @@ Output:
 }
 ```
 
-# Video result
+## Video result
 
-    curl -H "Authorization: Basic JDJhJDEwJGdsYjBGZzhNMDIvd0JESzhsd090WHVOMjVkeXB2RllaT3JXVk5OcnYvR0lmOEFxYTlYWlNH" http://api.teradeep.com:8088/video/result -F processid=55fc6ab592bfa83907818e1f
+    curl -H "Authorization: Basic mRFJHFaMlUG40wS1BTdEVwL0tmLDbnlmVd3T09ZlYvLUzZ08VXUFJyZGNnPk1ZSHZhQXdiRDJDJhJDEw" http://api.teradeep.com:8088/video/result -F processid=55fc6ab592bfa83907818e1f
 
 Output:
 
