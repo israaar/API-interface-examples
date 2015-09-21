@@ -1,4 +1,14 @@
-# CURL Examples
+# Chrome Postman
+
+In order to easily test TeraDeep's API, we can use [Postman](https://www.getpostman.com/) as shown in the video tutorial below.
+The link for importing TeraDeep's API Postman collection is: https://goo.gl/YWVwGD
+
+Postman
+
+As an addition, we provide cURL code below.
+
+
+# cURL Examples
 
 Put your API key after "Basic" instead of mRFJ...
 
