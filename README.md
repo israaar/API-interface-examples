@@ -1,9 +1,9 @@
 # Chrome Postman
 
 In order to easily test TeraDeep's API, we can use [Postman](https://www.getpostman.com/) as shown in the video tutorial below.
-The link for importing TeraDeep's API Postman collection is: https://goo.gl/YWVwGD
+The link for importing TeraDeep's API Postman collection is: https://goo.gl/YWVwGD.
 
-Postman
+Postman can generate [snippets of code](http://blog.getpostman.com/2015/08/31/writing-front-end-api-code-with-postman/) in many popular languages: C,cURL, C#, Go, HTTP, Java, JavaSript, NodeJS, Objective-C, OCaml, PHP, Python, Ruby, Sheell and Swift.
 
 As an addition, we provide cURL code below.
 
